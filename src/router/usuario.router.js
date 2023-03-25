@@ -3,7 +3,7 @@ const router = express.Router();
 const usuarioController = require("../controller/usuario.controller");
 
 // rotas GET
-router.get('/findbyId:id',usuarioController.findUserByIdController);
+router.get('/findbyId/:id',usuarioController.findUserByIdController);
 router.get('/findAll',usuarioController.findAllUsersController);
  //Rotas POST
 router.post('/create',usuarioController.createUserController);
