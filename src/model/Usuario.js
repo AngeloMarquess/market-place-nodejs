@@ -5,12 +5,12 @@ nome: {type: String, required: true},
 email: {type: String, unique: true, required: true},
 senha: {type: String, required:true},
 imagem:{type: String,required:true},
-endereços: [
+enderecos: [
   {
      rua: {type: String, required: true},
-     rua: {type: Number, required: true},
-     rua: {type: String, required: false},
-     cep: {type: String, required: false},
+     numero: {type: Number, required: true},
+     complemento: {type: String, required: false},
+     CEP: {type: String, required: false},
      createdAt: {type: Date, required: true, default:Date.now()},
   }
 ],
