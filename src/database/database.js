@@ -1,7 +1,7 @@
 const mongoose =require("mongoose");
 
 function connectToDatabase(){
-  mongoose.connect("mongodb+srv://angelofe:5cIdGcv6P86DwrvJ@cluster0.cwyzrsy.mongodb.net/Empresa",{
+  mongoose.connect("mongodb+srv://angelofe:5cIdGcv6P86DwrvJ@cluster0.cwyzrsy.mongodb.net/market-place",{
 useNewUrlParser: true,
 useUnifiedTopology:true,
   }).then(()=>{

@@ -69,13 +69,14 @@ const removeUserController = async (req, res) => {
   const deletedUser = await userService.removeUserService(req.params.id);
 
   console.log(deletedUser);
-  res.status(200).send({message:`Sucesso ,Usuario  deletado`});
 
-  // if(deletedUser.deleteCount >0){
-  //   res.status(200).send({message:`Sucesso ,Usuario  deletado`});
-  // }else{
-  //   res.status(404).send({message:`Usuario nao encontrado , tente novamente`});
-  // }
+  if(deletedUser ==null){
+    res.status(404).send({message:`Usuario nao encontrado , tente novamente`});
+
+  }else{
+    res.status(200).send({message:`Sucesso ,Usuario  deletado`});
+
+  }
 
 
   }catch(err){
