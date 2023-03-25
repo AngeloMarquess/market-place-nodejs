@@ -11,14 +11,14 @@ endereços: [
      rua: {type: Number, required: true},
      rua: {type: String, required: false},
      cep: {type: String, required: false},
-     createdAt: {type: Date, required: true},
+     createdAt: {type: Date, required: true, default:Date.now()},
   }
 ],
-createAt: {type: Date, required: true},
+createAt: {type: Date, required: true , default:Date.now()},
 produtos_fav:[
   {
         _id:{type: mongoose.Schema.Types.ObjectId,required:true, unique:true, ref:"produtos"},
-        createAt: {type: Date, required: true},
+        createAt: {type: Date, required: true, default:Date.now()},
        
   }
 ],
