@@ -7,7 +7,7 @@ const auth = require("./src/router/auth.router"); //arquivo de rota  de auth
 
 const app= express();
 
-const port =3000;
+const port =3001;
 
 app.use(express.json());
 

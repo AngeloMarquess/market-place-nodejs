@@ -1,7 +1,7 @@
 const authService =require("../service/auth.service");
 const bcrypt = require("bcrypt");
 
-const loginController = async (req,res)=> {
+const loginController = async (req,res)=>{ 
   const {email,senha} =req.body;
 
   const user =await authService.loginService(email);

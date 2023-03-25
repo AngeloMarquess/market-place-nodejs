@@ -2,8 +2,10 @@ const express = require("express");
 const router = express.Router();
 const usuarioController = require("../controller/usuario.controller");
 
+const authMiddleware = require("../middleware/auth.middleware");
+
 // rotas GET
-router.get('/findbyId/:id',usuarioController.findUserByIdController);
+router.get('/findbyId/:id',authMiddleware,usuarioController.findUserByIdController);
 router.get('/findAll',usuarioController.findAllUsersController);
  //Rotas POST
 router.post('/create',usuarioController.createUserController);
