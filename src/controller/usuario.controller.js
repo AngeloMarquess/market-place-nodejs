@@ -17,7 +17,7 @@ const findUserByIdController = async (req ,res)=> {
 
     }
     console.log(`erro:${err.message}`);
-   return res.status(500).send({message:`Erro Inesperado tente novamente!`});
+   return res.status(500).send({message:`ID informado, está incorreto, tente novamente!`});
   }
 } ;
 const findAllUsersController = async ( req, res) =>{
@@ -66,16 +66,16 @@ return res.send(await userService.updateUserService(req.params.id, body));
 
 const removeUserController = async (req, res) => {
   try{
-  const deleteUser = await userService.removeUserService(re.params.id);
+  const deletedUser = await userService.removeUserService(re.params.id);
 
-  if(deletedUser.deleteCount >0){
-    res.status(200).send({message:`Sucesso ,Usuario  deletado`});
-  
-  }else{
-    res.status(404).send({message:`Usuario nao encontrado , tente novamente`});
-  
+  console.log(deletedUser);
+  res.status(200).send({message:`Sucesso ,Usuario  deletado`});
 
-  }
+  // if(deletedUser.deleteCount >0){
+  //   res.status(200).send({message:`Sucesso ,Usuario  deletado`});
+  // }else{
+  //   res.status(404).send({message:`Usuario nao encontrado , tente novamente`});
+  // }
 
 
   }catch(err){
