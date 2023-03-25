@@ -66,7 +66,7 @@ return res.send(await userService.updateUserService(req.params.id, body));
 
 const removeUserController = async (req, res) => {
   try{
-  const deletedUser = await userService.removeUserService(re.params.id);
+  const deletedUser = await userService.removeUserService(req.params.id);
 
   console.log(deletedUser);
   res.status(200).send({message:`Sucesso ,Usuario  deletado`});
