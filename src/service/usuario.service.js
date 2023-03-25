@@ -37,7 +37,7 @@ return Usuario.findOneAndUpdate(
   );
 };
 
-const removeUserAddressService = (id, adressId) =>{
+const removeUserAddressService = (id, addressId) =>{
   return Usuario.findOneAndUpdate(
     {
      _id: id, 
@@ -46,7 +46,7 @@ const removeUserAddressService = (id, adressId) =>{
    
      $pull:{
        enderecos: {
-        _id: addressId
+        _id:addressId
        },
      }
     },
